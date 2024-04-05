@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    font-family: "Grandiflora One", cursive;
+    color: #A17D60;
+}
+
+.navbar,
+body {
+    background-color: #F8F7F6;
+}
+
+.hero,
+.card {
+    background-color: #E5E0D5;
+}
+
+.hero {
+    background-image: url('https://source.unsplash.com/random/1920x1080/?cat');
+}
+
+/* 
+* a propriedade abaixo vem nos elementos que tem a classe row
+* ela estava deixando as imagens dos cards feias e eu nao queria tirar essa classe
+* entao eu fiz a classe cards para selecionar somente esses cards especificos e remover o valor que tinha na propriedade
+*/
+.cards .card {
+    --bs-gutter-x: 0;
+}
