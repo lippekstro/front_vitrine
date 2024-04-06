@@ -38,7 +38,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/front_vitrine/index.php">Inicio</a>
+                            <a class="nav-link" aria-current="page" href="/front_vitrine/index.php">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/front_vitrine/views/produtos.php">Produtos</a>
@@ -50,6 +50,13 @@
                             <a class="nav-link" href="/front_vitrine/views/login.php" >
                                 <span class="material-symbols-outlined">
                                     account_circle
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login">
+                            <a class="nav-link" href="/front_vitrine/views/perfil.php" >
+                                <span class="material-symbols-outlined">
+                                    person
                                 </span>
                             </a>
                         </li>

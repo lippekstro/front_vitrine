@@ -15,7 +15,8 @@ body {
 }
 
 .hero,
-.card {
+.card,
+.list-group-item {
     background-color: #E5E0D5;
 }
 
