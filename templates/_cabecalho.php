@@ -53,7 +53,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login">
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Perfil">
                             <a class="nav-link" href="/front_vitrine/views/perfil.php" >
                                 <span class="material-symbols-outlined">
                                     person

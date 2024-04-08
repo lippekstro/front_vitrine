@@ -5,18 +5,31 @@ require_once "../templates/_cabecalho.php";
 <section class="row m-3">
 
     <div class="col-md-3 d-flex flex-md-column align-items-center justify-content-center">
-        <img class="rounded-circle m-3" src="/front_vitrine/imgs/dummy_usuario.png" alt="" width="100px" height="100px">
+        <div class="position-relative">
+            <img class="rounded-circle m-3" src="/front_vitrine/imgs/dummy_usuario.png" alt="" width="100px" height="100px">
+            <a href="/front_vitrine/views/perfil_foto_edt_form.php" class="position-absolute top-50 start-50 translate-middle edt-foto" title="Editar Foto"><span class="material-symbols-outlined">add_photo_alternate</span></a>
+        </div>
+        
         <ul class="list-group">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-            <li class="list-group-item">And a fifth one</li>
+            <li class="list-group-item">Fulano</li>
+            <li class="list-group-item">fulano@mail.com</li>
+            <li class="list-group-item">
+                <a href="/front_vitrine/views/perfil_edt_form.php" class="btn btn-primary d-flex align-items-center justify-content-between">Editar Perfil</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/front_vitrine/views/perfil_senha_edt_form.php" class="btn btn-primary d-flex align-items-center justify-content-between">Editar Senha</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/front_vitrine/index.php" class="btn btn-danger d-flex align-items-center justify-content-between">Sair <span class="material-symbols-outlined">logout</span></a>
+            </li>
         </ul>
     </div>
 
     <div class="col-md-9">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea fuga, rerum nostrum molestias odio, suscipit nobis doloribus ut officia illum tempora. Fugiat libero dolorem dolore nam mollitia, itaque perferendis natus!</p>
+        <div class="d-flex justify-content-center m-3">
+            <a href="/front_vitrine/views/admin/categorias_gerenciar.php" class="btn btn-primary m-3">Gerenciar Categorias</a>
+            <a href="/front_vitrine/views/admin/produtos_gerenciar.php" class="btn btn-primary m-3">Gerenciar Produtos</a>
+        </div>
     </div>
 
 </section>

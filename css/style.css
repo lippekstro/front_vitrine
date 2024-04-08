@@ -32,3 +32,12 @@ body {
 .cards .card {
     --bs-gutter-x: 0;
 }
+
+.edt-foto {
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.edt-foto:hover {
+    opacity: 1;
+}
