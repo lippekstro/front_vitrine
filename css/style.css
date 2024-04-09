@@ -9,17 +9,6 @@
     color: #A17D60;
 }
 
-.navbar,
-body {
-    background-color: #F8F7F6;
-}
-
-.hero,
-.card,
-.list-group-item {
-    background-color: #E5E0D5;
-}
-
 .hero {
     background-image: url('https://source.unsplash.com/random/1920x1080/?cat');
 }

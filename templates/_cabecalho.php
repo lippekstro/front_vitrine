@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -38,6 +38,13 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
+                            <a class="nav-link modo" aria-current="page" href="javascript:;">
+                                <span class="material-symbols-outlined">
+                                    dark_mode
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/front_vitrine/index.php">Inicio</a>
                         </li>
                         <li class="nav-item">
@@ -47,14 +54,14 @@
                             <a class="nav-link" href="/front_vitrine/views/sobre.php">Sobre</a>
                         </li>
                         <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login">
-                            <a class="nav-link" href="/front_vitrine/views/login.php" >
+                            <a class="nav-link" href="/front_vitrine/views/login.php">
                                 <span class="material-symbols-outlined">
                                     account_circle
                                 </span>
                             </a>
                         </li>
                         <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Perfil">
-                            <a class="nav-link" href="/front_vitrine/views/perfil.php" >
+                            <a class="nav-link" href="/front_vitrine/views/perfil.php">
                                 <span class="material-symbols-outlined">
                                     person
                                 </span>
