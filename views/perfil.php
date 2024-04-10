@@ -6,13 +6,13 @@ require_once "../templates/_cabecalho.php";
 
     <div class="col-md-3 d-flex flex-md-column align-items-center justify-content-center">
         <div class="position-relative">
-            <img class="rounded-circle m-3" src="/front_vitrine/imgs/dummy_usuario.png" alt="" width="100px" height="100px">
+            <img class="rounded-circle m-3" src="data:image;charset=utf8;base64,<?= base64_encode($_SESSION['usuario']['foto']) ?>" alt="" width="100px" height="100px">
             <a href="/front_vitrine/views/perfil_foto_edt_form.php" class="position-absolute top-50 start-50 translate-middle edt-foto" title="Editar Foto"><span class="material-symbols-outlined">add_photo_alternate</span></a>
         </div>
         
         <ul class="list-group">
-            <li class="list-group-item">Fulano</li>
-            <li class="list-group-item">fulano@mail.com</li>
+            <li class="list-group-item"><?= $_SESSION['usuario']['nome'] ?></li>
+            <li class="list-group-item"><?= $_SESSION['usuario']['email'] ?></li>
             <li class="list-group-item">
                 <a href="/front_vitrine/views/perfil_edt_form.php" class="btn btn-primary d-flex align-items-center justify-content-between">Editar Perfil</a>
             </li>
@@ -20,7 +20,7 @@ require_once "../templates/_cabecalho.php";
                 <a href="/front_vitrine/views/perfil_senha_edt_form.php" class="btn btn-primary d-flex align-items-center justify-content-between">Editar Senha</a>
             </li>
             <li class="list-group-item">
-                <a href="/front_vitrine/index.php" class="btn btn-danger d-flex align-items-center justify-content-between">Sair <span class="material-symbols-outlined">logout</span></a>
+                <a href="/front_vitrine/controllers/logout_controller.php" class="btn btn-danger d-flex align-items-center justify-content-between">Sair <span class="material-symbols-outlined">logout</span></a>
             </li>
         </ul>
     </div>

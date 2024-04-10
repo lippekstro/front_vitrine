@@ -94,7 +94,8 @@ class usuario
             $_SESSION['usuario']['nome'] = $registro['nome'];
             $_SESSION['usuario']['email'] = $registro['email'];
             $_SESSION['usuario']['nivel_acesso'] = $registro['nivel_acesso'];
-            header("Location: /front_vitrine/index.php");
+            $_SESSION['usuario']['foto'] = $registro['img_usuario'];
+            header("Location: /front_vitrine/views/perfil.php");
             exit();
         } else {
             setcookie('msg', 'Email ou Senha Incorreto!', time() + 10, '/front_vitrine/');

@@ -8,7 +8,7 @@ require_once "../templates/_cabecalho.php";
     </div>
 
     <div class="col-md-4">
-        <form>
+        <form action="/front_vitrine/controllers/login_controller.php" method="post">
             <div class="d-flex justify-content-center">
                 <img class="mb-4 w-25" src="/front_vitrine/imgs/vitrine_logo.png" alt="">
             </div>
@@ -16,13 +16,13 @@ require_once "../templates/_cabecalho.php";
             <h1 class="h3 mb-3 fw-normal">Login</h1>
 
             <div class="form-floating my-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="email@exemplo.com">
-                <label for="floatingInput">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="email@exemplo.com" name="email">
+                <label for="email">Email</label>
             </div>
 
             <div class="form-floating my-3">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
-                <label for="floatingPassword">Senha</label>
+                <input type="password" class="form-control" id="senha" placeholder="Senha" name="senha">
+                <label for="senha">Senha</label>
             </div>
 
             <div class="my-3 text-center">
