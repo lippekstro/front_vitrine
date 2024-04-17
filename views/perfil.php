@@ -11,8 +11,8 @@ require_once "../templates/_cabecalho.php";
         </div>
         
         <ul class="list-group">
-            <li class="list-group-item">Fulano</li>
-            <li class="list-group-item">fulano@mail.com</li>
+            <li class="list-group-item"><?= $_SESSION['usuario']['nome'] ?></li>
+            <li class="list-group-item"><?= $_SESSION['usuario']['email'] ?></li>
             <li class="list-group-item">
                 <a href="/front_vitrine/views/perfil_edt_form.php" class="btn btn-primary d-flex align-items-center justify-content-between">Editar Perfil</a>
             </li>
@@ -20,7 +20,7 @@ require_once "../templates/_cabecalho.php";
                 <a href="/front_vitrine/views/perfil_senha_edt_form.php" class="btn btn-primary d-flex align-items-center justify-content-between">Editar Senha</a>
             </li>
             <li class="list-group-item">
-                <a href="/front_vitrine/index.php" class="btn btn-danger d-flex align-items-center justify-content-between">Sair <span class="material-symbols-outlined">logout</span></a>
+                <a href="/front_vitrine/controllers/logout_controller.php" class="btn btn-danger d-flex align-items-center justify-content-between">Sair <span class="material-symbols-outlined">logout</span></a>
             </li>
         </ul>
     </div>
