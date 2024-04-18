@@ -1,5 +1,13 @@
 <?php
-require_once "../../templates/_cabecalho.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/templates/_cabecalho.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/models/categoria.php";
+
+try {
+    $lista = Categoria::listar();
+} catch (PDOException $e) {
+    $e->getMessage();
+}
+
 ?>
 
 <section class="m-3">
@@ -17,10 +25,10 @@ require_once "../../templates/_cabecalho.php";
             </tr>
         </thead>
         <tbody>
-            <?php for ($i = 0; $i < 10; $i++) : ?>
+            <?php foreach ($lista as $cat) : ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Roupas</td>
+                    <th scope="row"><?= $cat['id_categoria'] ?></th>
+                    <td><?= $cat['nome_categoria'] ?></td>
 
                     <td class="text-center">
                         <a href="/front_vitrine/views/admin/categorias_edt_form.php" title="Editar Categoria">
@@ -33,11 +41,11 @@ require_once "../../templates/_cabecalho.php";
                         </a>
                     </td>
                 </tr>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </section>
 
 <?php
-require_once "../../templates/_rodape.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/templates/_rodape.php";
 ?>

@@ -1,5 +1,12 @@
 <?php
-require_once "templates/_cabecalho.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/templates/_cabecalho.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/models/categoria.php";
+
+try {
+    $lista = Categoria::listar();
+} catch (PDOException $e) {
+    $e->getMessage();
+}
 ?>
 
 <section>
@@ -10,16 +17,16 @@ require_once "templates/_cabecalho.php";
 </section>
 
 <section class="m-3 d-flex justify-content-evenly align-items-center flex-wrap">
-    <?php for ($j = 0; $j < 3; $j++) : ?>
+    <?php foreach ($lista as $cat) : ?>
         <a href="/front_vitrine/views/produtos.php" class="text-decoration-none m-3">
             <div class="d-flex justify-content-center align-items-center flex-column">
-                <h2>Roupas</h2>
-                <img src="https://source.unsplash.com/random/1920x1080/?product" class="rounded-circle" alt="..." width="200rem" height="200rem">
+                <h2><?= $cat['nome_categoria'] ?></h2>
+                <img src="data:image;charset=utf8;base64,<?= base64_encode($cat['foto_categoria']) ?>" class="rounded-circle" alt="..." width="200rem" height="200rem">
             </div>
         </a>
-    <?php endfor; ?>
+    <?php endforeach; ?>
 </section>
 
 <?php
-require_once "templates/_rodape.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/templates/_rodape.php";
 ?>
