@@ -31,12 +31,12 @@ try {
                     <td><?= $cat['nome_categoria'] ?></td>
 
                     <td class="text-center">
-                        <a href="/front_vitrine/views/admin/categorias_edt_form.php" title="Editar Categoria">
+                        <a href="/front_vitrine/views/admin/categorias_edt_form.php?id=<?= $cat['id_categoria'] ?>" title="Editar Categoria">
                             <span class="material-symbols-outlined">edit</span>
                         </a>
                     </td>
                     <td class="text-center">
-                        <a href="" title="Deletar Categoria">
+                        <a href="/front_vitrine/controllers/categoria_del_controller.php?id=<?= $cat['id_categoria'] ?>" title="Deletar Categoria">
                             <span class="material-symbols-outlined text-danger">delete</span>
                         </a>
                     </td>
