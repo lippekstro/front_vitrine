@@ -1,6 +1,6 @@
 <?php
 
-require '../configs/config.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/configs/config.php";
 
 class Conexao{
 

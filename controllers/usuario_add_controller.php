@@ -1,6 +1,6 @@
 <?php
 
-require '../models/usuario.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/models/usuario.php";
 
 try {
     $nome = $_POST['nome'];

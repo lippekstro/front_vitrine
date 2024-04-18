@@ -1,6 +1,6 @@
 <?php
 
-require_once '../db/conexao.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/db/conexao.php";
 
 class Usuario {
     public $id_usuario;

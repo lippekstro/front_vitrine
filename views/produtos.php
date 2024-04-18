@@ -1,5 +1,5 @@
 <?php
-require_once "../templates/_cabecalho.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/templates/_cabecalho.php";
 ?>
 
 <section class="m-3 d-grid justify-content-evenly align-items-center cards grid-template">
@@ -16,5 +16,5 @@ require_once "../templates/_cabecalho.php";
 </section>
 
 <?php
-require_once "../templates/_rodape.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/templates/_rodape.php";
 ?>
