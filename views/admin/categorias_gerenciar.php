@@ -1,5 +1,13 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/templates/_cabecalho.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/models/categoria.php";
+
+try {
+    $lista = Categoria::listar();
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
 ?>
 
 <section class="m-3">
@@ -17,23 +25,23 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/templates/_cabecalho.ph
             </tr>
         </thead>
         <tbody>
-            <?php for ($i = 0; $i < 10; $i++) : ?>
+            <?php foreach ($lista as $cat) : ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Roupas</td>
+                    <th scope="row"><?= $cat['id_categoria'] ?></th>
+                    <td><?= $cat['nome_categoria'] ?></td>
 
                     <td class="text-center">
-                        <a href="/front_vitrine/views/admin/categorias_edt_form.php" title="Editar Categoria">
+                        <a href="/front_vitrine/views/admin/categorias_edt_form.php?id=<?= $cat['id_categoria'] ?>" title="Editar Categoria">
                             <span class="material-symbols-outlined">edit</span>
                         </a>
                     </td>
                     <td class="text-center">
-                        <a href="" title="Deletar Categoria">
+                        <a href="/front_vitrine/controllers/categoria_del_controller.php?id=<?= $cat['id_categoria'] ?>" title="Deletar Categoria">
                             <span class="material-symbols-outlined text-danger">delete</span>
                         </a>
                     </td>
                 </tr>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </section>

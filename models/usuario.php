@@ -29,11 +29,6 @@ class Usuario {
         $stmt->execute();
     }
 
-    // carregar
-    // editar
-    // editar senha
-    // editar foto
-    
     public static function logar($email, $senha){
         $sql = "SELECT * FROM usuarios WHERE email = :email";
         $conexao = Conexao::conectar();
@@ -55,4 +50,9 @@ class Usuario {
             exit();
         }
     }
+    
+    // carregar
+    // editar
+    // editar senha
+    // editar foto
 }
