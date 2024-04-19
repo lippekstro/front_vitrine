@@ -1,5 +1,13 @@
 <?php
-require_once "../../templates/_cabecalho.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/templates/_cabecalho.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/models/produto.php";
+
+try {
+    $lista = Produto::listar();
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
 ?>
 
 <section class="m-3">
@@ -19,12 +27,12 @@ require_once "../../templates/_cabecalho.php";
             </tr>
         </thead>
         <tbody>
-            <?php for ($i = 0; $i < 10; $i++) : ?>
+            <?php foreach ($lista as $p) : ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Camisa</td>
-                    <td>R$50,00</td>
-                    <td>Roupas</td>
+                    <th scope="row"><?= $p['id_produto'] ?></th>
+                    <td><?= $p['nome_produto'] ?></td>
+                    <td>R$<?= $p['preco'] ?></td>
+                    <td><?= $p['id_categoria'] ?></td>
 
                     <td class="text-center">
                         <a href="/front_vitrine/views/admin/produtos_edt_form.php" title="Editar Produto">
@@ -37,11 +45,11 @@ require_once "../../templates/_cabecalho.php";
                         </a>
                     </td>
                 </tr>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </section>
 
 <?php
-require_once "../../templates/_rodape.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/templates/_rodape.php";
 ?>
