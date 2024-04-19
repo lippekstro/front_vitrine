@@ -19,7 +19,7 @@ try {
     if($foto){
         $usuario->foto = $foto;
     } else {
-        $usuario->foto = file_get_contents('/front_vitrine/imgs/dummy_usuario.png');
+        $usuario->foto = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/front_vitrine/imgs/dummy_usuario.png');
     }
 
     $usuario->criar();

@@ -3,21 +3,22 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . "/front_vitrine/models/categoria.php";
 
 try {
+    $id = $_POST['id'];
     $nome = $_POST['nome'];
 
     if (!empty($_FILES['foto']['tmp_name'])) {
         $foto = file_get_contents($_FILES['foto']['tmp_name']);
     }
 
-    $categoria = new Categoria();
+    $categoria = new Categoria($id);
     $categoria->nome_categoria = $nome;
-    if ($foto) {
+    if($foto){
         $categoria->foto_categoria = $foto;
     } else {
-        $categoria->foto_categoria = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/front_vitrine/imgs/dummy.png');
+        $categoria->foto_categoria = $categoria->foto_categoria;
     }
 
-    $categoria->criar();
+    $categoria->atualizar();
 
     header('Location: /front_vitrine/views/admin/categorias_gerenciar.php');
     exit();

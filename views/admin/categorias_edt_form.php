@@ -19,6 +19,8 @@ try {
 
         <h1 class="h3 mb-3 fw-normal">Editar Categoria</h1>
 
+        <input type="hidden" name="id" value="<?= $categoria->id_categoria ?>">
+
         <div class="form-floating my-3">
             <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da Categoria" value="<?= $categoria->nome_categoria ?>">
             <label for="nome">Nome da Categoria</label>

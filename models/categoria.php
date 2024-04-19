@@ -50,7 +50,15 @@ class Categoria
         return $resultado;
     }
 
-    //editar
+    public function atualizar(){
+        $sql = "UPDATE categorias SET nome_categoria = :nome, foto_categoria = :foto WHERE id_categoria = :id";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($sql);
+        $stmt->bindValue(':nome', $this->nome_categoria);
+        $stmt->bindValue(':foto', $this->foto_categoria);
+        $stmt->bindValue(':id', $this->id_categoria);
+        $stmt->execute();
+    }
 
     public function delete()
     {

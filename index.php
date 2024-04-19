@@ -18,7 +18,7 @@ try {
 
 <section class="m-3 d-flex justify-content-evenly align-items-center flex-wrap">
     <?php foreach ($lista as $cat) : ?>
-        <a href="/front_vitrine/views/produtos.php" class="text-decoration-none m-3">
+        <a href="/front_vitrine/views/produtos.php?cat=<?= $cat['id_categoria'] ?>" class="text-decoration-none m-3">
             <div class="d-flex justify-content-center align-items-center flex-column">
                 <h2><?= $cat['nome_categoria'] ?></h2>
                 <img src="data:image;charset=utf8;base64,<?= base64_encode($cat['foto_categoria']) ?>" class="rounded-circle" alt="..." width="200rem" height="200rem">
